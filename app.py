@@ -28,6 +28,7 @@ MAX_ROUNDS = 5
 MAX_CONSECUTIVE_AUTO_REPLY=5
 
 index = None
+default_llm_model = "meta-llama-3-8b-instruct"
 
 async def load_index():
 # load index
@@ -52,7 +53,7 @@ async def on_chat_start():
                 Select(
                     id="Model",
                     label="Open Source - Models",
-                    values=["meta-llama-3-8b-instruct", "gemma-2-2b-it"],
+                    values=[default_llm_model],
                     initial_index=0,
                 ),
                 #Switch(id="Streaming", label="OpenAI - Stream Tokens", initial=True),
@@ -60,13 +61,7 @@ async def on_chat_start():
 
     model_config_list = [
     {
-        "model": "meta-llama-3-8b-instruct",
-        "base_url": "http://localhost:1234/v1",
-        "tags": ["local"],
-        "api_key": "lm-studio",
-    },
-    {
-        "model": "gemma-2-2b-it",
+        "model": default_llm_model,
         "base_url": "http://localhost:1234/v1",
         "tags": ["local"],
         "api_key": "lm-studio",
@@ -80,7 +75,7 @@ async def on_chat_start():
     }
     
     llm = LMStudio(
-    model_name="meta-llama-3-8b-instruct",
+    model_name=default_llm_model,
     base_url="http://localhost:1234/v1",
     temperature=0,
 )

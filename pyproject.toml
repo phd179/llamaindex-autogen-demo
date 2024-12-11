@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "chainlit-ui"
+version = "0.1.0"
+description = ""
+authors = ["pd <pdamore@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.13"
+autogen = "^0.3.1"
+llama-index = "^0.12.1"
+llama-index-core = "^0.12.1"
+llama-index-embeddings-huggingface = "^0.4.0"
+llama-index-llms-lmstudio = "^0.3.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -8,10 +8,12 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = ">=3.11,<3.13"
 autogen = "^0.3.1"
+chainlit = "^1.0.0"
 llama-index = "^0.12.1"
 llama-index-core = "^0.12.1"
 llama-index-embeddings-huggingface = "^0.4.0"
 llama-index-llms-lmstudio = "^0.3.0"
+python-dotenv = "^1.0.0"
 
 
 [build-system]

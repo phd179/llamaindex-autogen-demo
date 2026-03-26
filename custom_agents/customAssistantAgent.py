@@ -15,8 +15,8 @@ class ChainlitAssistantAgent(AssistantAgent):
     ) -> bool:
         cl.run_sync(
             cl.Message(
-                content=f'*Sending message to "{self.name}":*\n\n{message}',
-                author="AssistantAgent",
+                content=f'*Sending message to "{recipient.name}":*\n\n{message}',
+                author=self.name,
             ).send()
         )
         super(ChainlitAssistantAgent, self).send(

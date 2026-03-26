@@ -1,14 +1,28 @@
-# Welcome to Chainlit! 🚀🤖
+# Welcome to the LlamaIndex + AutoGen Demo 🤖🦙
 
-Hi there, Developer! 👋 We're excited to have you on board. Chainlit is a powerful tool designed to help you prototype, debug and share applications built on top of LLMs.
+This app lets two AI agents collaborate to solve any task you give them — powered by a locally-running LLM via **LM Studio**.
+
+## Getting Started 🚀
+
+1. Make sure **LM Studio** is running and a model is loaded (Developer → Start Server).
+2. Type a task in the chat box and watch the agents work together.
+
+## RAG Mode 📄
+
+Prefix your message with **rag** to query your own documents instead of using the multi-agent pipeline.
+
+> Example: `rag what does the report say about Q3 revenue?`
+
+Documents are loaded from the `rag-docs/` folder. Drop any `.txt`, `.pdf`, or `.md` files there before starting the app.
+
+## Customizing the Agents 🛠️
+
+Edit `agent_templates/template_list.py` to change what each agent does.
+The default setup is a **code-writer** (agent1) paired with a **code-reviewer** (agent2).
 
 ## Useful Links 🔗
 
-- **Documentation:** Get started with our comprehensive [Chainlit Documentation](https://docs.chainlit.io) 📚
-- **Discord Community:** Join our friendly [Chainlit Discord](https://discord.gg/k73SQ3FyUh) to ask questions, share your projects, and connect with other developers! 💬
-
-We can't wait to see what you create with Chainlit! Happy coding! 💻😊
-
-## Welcome screen
-
-To modify the welcome screen, edit the `chainlit.md` file at the root of your project. If you do not want a welcome screen, just leave this file empty.
+- [LM Studio](https://lmstudio.ai/)
+- [LlamaIndex Docs](https://docs.llamaindex.ai/)
+- [AutoGen Docs](https://microsoft.github.io/autogen/)
+- [Chainlit Docs](https://docs.chainlit.io/)
